@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VST Finder — Find the Perfect Plugin for Your Sound</title>
+  <meta name="description" content="Browse, search, and discover VST plugins for music production. Synths, effects, samplers, and utilities — free and paid. The ultimate plugin directory for producers.">
+  <meta name="theme-color" content="#0D0F14">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "VST Finder",
+    "url": "https://vstfinder.com",
+    "description": "The ultimate VST plugin directory for music producers. Browse synths, effects, samplers, and utilities.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://vstfinder.com/#search/{search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo" onclick="navigateTo('')">
+        <div class="logo-icon">V</div>
+        <div class="logo-text">VST<span>Finder</span></div>
+      </div>
+
+      <div class="header-search">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="headerSearch" placeholder="Search plugins, developers, tags..." autocomplete="off">
+      </div>
+
+      <nav class="header-nav">
+        <a class="nav-link" onclick="navigateTo('browse')">Browse</a>
+        <a class="nav-link" onclick="navigateTo('lists')">Lists</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Main Content Area ===== -->
+  <main id="app"></main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-text">
+          &copy; 2026 VST Finder — The plugin directory for music producers.
+        </div>
+        <div class="footer-links">
+          <a href="#" onclick="navigateTo('browse'); return false;">Browse Plugins</a>
+          <a href="#" onclick="navigateTo('lists'); return false;">Curated Lists</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
